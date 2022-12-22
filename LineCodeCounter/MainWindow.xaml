@@ -1,0 +1,24 @@
+﻿<Window x:Class="LineCodeCounter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LineCodeCounter"
+        mc:Ignorable="d"
+        Title="Code Line Viewer" Height="200" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Margin="10,10,0,0" Height="25" VerticalAlignment="Top" Orientation="Horizontal" Width="150">
+            <TextBox x:Name="textBox" TextWrapping="NoWrap" Text="Open Folder" Width="125" IsReadOnly="True" />
+            <Button x:Name="button" Content="...&#xD;&#xA;" Margin="0,0,0,0" Width="25" d:LayoutOverrides="Height" Click="OpenFolderClick"/>
+        </StackPanel>
+        <Button x:Name="button1" Content="Start" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="75" Click="CountLines"/>
+        <Label x:Name="disp" Content="" Margin="170,9,10,0" VerticalAlignment="Top"/>
+        <ListView x:Name="listView" Margin="100,45,79,26">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
